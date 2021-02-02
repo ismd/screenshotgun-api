@@ -7,6 +7,10 @@ Use this application as a backend for [Screenshotgun](https://github.com/ismd/sc
 ## Environment variables
 To launch the server you shoud set these variables:
 
+  * `PORT` *optional*
+  
+  Port on which to run server. Default `80`.
+
   * `UPLOAD_DESTINATION`
 
   The only available value is `aws`.

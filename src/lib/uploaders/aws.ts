@@ -1,5 +1,5 @@
 import S3 from 'aws-sdk/clients/s3';
-import {config} from './config';
+import {config} from '../config';
 
 const s3 = new S3({
     accessKeyId: config.AWS_ACCESS_KEY_ID,
@@ -16,9 +16,15 @@ export const upload = async () => new Promise((resolve, reject) => {
 
     s3.upload(uploadParams, (err, data) => {
         if (err) {
-            reject(err);
+            reject({
+                status: 'error',
+                message: err,
+            });
         }
 
-        resolve(JSON.stringify(data));
+        resolve({
+            status: 'ok',
+            data,
+        });
     });
 });

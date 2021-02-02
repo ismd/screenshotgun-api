@@ -1,17 +1,20 @@
 import express from 'express';
-import {upload} from './lib';
+import {upload} from './lib/upload';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 80;
 
-app.get('/_/upload', async (_req, res) => {
+app.post('/_/upload', async (_req, res) => {
     const result = await upload();
-    res.send(result);
+    res.json(result);
 });
 
+app.get('/ping', (_req, res) => {
+    res.send('ok');
+})
+
 app.use((_req, res) => {
-    res.status(404);
-    res.send();
+    res.sendStatus(404);
 });
 
 app.listen(port);
