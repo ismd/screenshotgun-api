@@ -1,18 +1,17 @@
 import express from 'express';
+import {upload} from './lib';
+
 const app = express();
 const port = 3000;
 
-app.post('/screenshot', (_req, res) => {
-    res.send('Hello World!')
+app.get('/_/upload', async (_req, res) => {
+    const result = await upload();
+    res.send(result);
 });
 
 app.use((_req, res) => {
     res.status(404);
-    res.send({
-        error: "Not found",
-    });
+    res.send();
 });
 
-app.listen(port, () => {
-    console.info(`Example app listening at http://localhost:${port}`)
-});
+app.listen(port);
