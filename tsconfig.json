@@ -3,9 +3,7 @@
     "esModuleInterop": true,
     "module": "CommonJS",
     "noImplicitAny": true,
-    "outDir": "build"
-  },
-  "files": [
-    "src/app.ts"
-  ]
+    "outDir": "build",
+    "rootDir": "src"
+  }
 }
