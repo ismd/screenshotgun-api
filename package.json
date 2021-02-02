@@ -21,7 +21,8 @@
   "homepage": "https://github.com/ismd/screenshotgun-server-api#readme",
   "dependencies": {
     "aws-sdk": "^2.834.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nanoid": "^3.1.20"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
