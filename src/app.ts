@@ -19,7 +19,7 @@ app.post('/_/upload', async (req, res, next) => {
     }
 });
 
-app.get('/ping', (_req, res) => {
+app.get('/_/ping', (_req, res) => {
     res.send('ok');
 })
 
