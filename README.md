@@ -14,12 +14,12 @@ The app requires [environment variables](#environment-variables) to be set at ru
 
 ## Docker
 
-[Image at Docker Hub](https://hub.docker.com/r/ismd/screenshotgun-server-api)
+[Image at Docker Hub](https://hub.docker.com/r/ismd/screenshotgun-api)
 
 ### Pull
 
 ``` sh
-docker pull ismd/screenshotgun-server-api
+docker pull ismd/screenshotgun-api
 ```
 
 ### Run
@@ -30,7 +30,7 @@ docker run -p 80:80 \
   -e S3_BUCKET=<s3_bucket> \
   -e AWS_ACCESS_KEY_ID=<aws_access_key> \
   -e AWS_SECRET_ACCESS_KEY=<aws_secret_access_key> \
-  ismd/screenshotgun-server-api
+  ismd/screenshotgun-api
 ```
 
 See below about [environment variables](#environment-variables).

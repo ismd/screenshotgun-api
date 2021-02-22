@@ -1,5 +1,5 @@
 {
-  "name": "screenshotgun-server-api",
+  "name": "screenshotgun-api",
   "version": "0.0.1",
   "description": "Server for Screenshotgun app",
   "main": "app.js",
@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ismd/screenshotgun-server-api.git"
+    "url": "git+https://github.com/ismd/screenshotgun-api.git"
   },
   "keywords": [
     "screenshot"
   ],
   "author": "Vladimir Kosteley <zzismd@gmail.com>",
   "bugs": {
-    "url": "https://github.com/ismd/screenshotgun-server-api/issues"
+    "url": "https://github.com/ismd/screenshotgun-api/issues"
   },
-  "homepage": "https://github.com/ismd/screenshotgun-server-api#readme",
+  "homepage": "https://github.com/ismd/screenshotgun-api#readme",
   "dependencies": {
     "aws-sdk": "^2.834.0",
     "express": "^4.17.1",
