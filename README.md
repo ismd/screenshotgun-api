@@ -26,6 +26,7 @@ docker pull ismd/screenshotgun-api
 
 ``` sh
 docker run -p 80:80 \
+  -e WEBSITE=<url> \
   -e S3_ENDPOINT=<s3_endpoint> \
   -e S3_BUCKET=<s3_bucket> \
   -e AWS_ACCESS_KEY_ID=<aws_access_key> \
@@ -46,6 +47,10 @@ To launch the server you shoud set these variables:
   * `UPLOAD_DESTINATION`
 
   The only available value is `aws`.
+  
+  * `WEBSITE`
+
+  This url will be used for link generation. The [website](https://github.com/ismd/screenshotgun-website) should be available on this url.
 
   * `S3_ENDPOINT`
 

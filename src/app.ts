@@ -12,7 +12,7 @@ app.post('/_/upload', async (req, res, next) => {
 
         res.json({
             status: 'ok',
-            url: result.Location,
+            url: result,
         });
     } catch (e) {
         next(e);

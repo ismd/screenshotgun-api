@@ -5,6 +5,10 @@ function readEnv() {
         throw new Error('Invalid value of $UPLOAD_DESTINATION');
     }
 
+    if (!process.env.WEBSITE) {
+        throw new Error('Invalid value of $WEBSITE');
+    }
+
     if (!process.env.S3_ENDPOINT) {
         throw new Error('Invalid value of $S3_ENDPOINT');
     }
@@ -23,6 +27,7 @@ function readEnv() {
 
     return {
         UPLOAD_DESTINATION: process.env.UPLOAD_DESTINATION,
+        WEBSITE: process.env.WEBSITE,
         S3_ENDPOINT: process.env.S3_ENDPOINT,
         S3_BUCKET: process.env.S3_BUCKET,
         AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
