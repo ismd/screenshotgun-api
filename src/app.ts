@@ -4,7 +4,9 @@ import {upload} from './lib/upload';
 const app = express();
 const port = process.env.PORT || 80;
 
-app.use(express.json());
+app.use(express.json({
+    limit: '10mb',
+}));
 
 app.post('/_/upload', async (req, res, next) => {
     try {
@@ -37,6 +39,7 @@ app.use((
 
     res.status(500).json({
         status: 'error',
+        message: err.message,
     });
 });
 
